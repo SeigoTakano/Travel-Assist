@@ -2,4 +2,4 @@
 <footer class="site-footer">
 	<p>© 2026 Travel Assist</p>
 </footer>
-<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/header.css">

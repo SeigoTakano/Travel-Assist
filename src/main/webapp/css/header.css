@@ -29,21 +29,6 @@
     color: #1f2937;
 }
 
-/* アカウントアイコン */
-.icon {
-    font-size: 26px;
-    cursor: pointer;
-    flex-shrink: 0;
-    color: #1f2937;
-    margin-right: 40px;
-    transition: transform 0.2s;
-    width: 150px;
-	height: auto;
-}
-.icon:hover {
-    transform: scale(1.2);
-}
-
 /* ハンバーガーボタン */
 .hamburger {
     width: 50px;
@@ -59,7 +44,7 @@
     position: fixed;
     top: 70px;
     left: 20px;
-    z-index: 3000;
+    z-index: 7000;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: transform 0.2s;
 }
@@ -78,19 +63,20 @@
 /* 左からスライドするメニュー */
 .side-menu {
     position: fixed;
-    top: 60px;        
-    left: -260px;
-    width: 250px;
-    height: calc(100% - 60px);
+    top: 60px;           /* ヘッダー下からスタート */
+    left: -260px;         /* 初期は隠す */
+    width: 200px;
+    height: calc(100% - 60px); /* ヘッダーを除いた高さ */
     background: linear-gradient(to bottom, #3b82f6, #2563eb); 
-    padding: 30px 20px;
+    padding: 45px;
     box-sizing: border-box;
     transition: left 0.3s ease;
-    z-index: 250;
+    z-index: 6000;      /* ヘッダーより前面 */
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    padding: 45px;
+    overflow-y: auto;     /* 長くなってもスクロール可能 */
 }
+
 
 /* メニューリンク */
 .side-menu a {
@@ -118,3 +104,4 @@
 .hamburger.active {
     transform: rotate(90deg); /* 開いてる印 */
 }
+

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>トラベルアシスト</title>
   <link rel="stylesheet" href="css/header.css">
+  <script src="js/header.js"></script>
 </head>
 <body>
   
@@ -14,6 +15,6 @@
     <h2></h2>
     <p></p>
   </main>
-  <%@ include file="footer.jsp" %>
 </body>
+  <%@ include file="footer.jsp" %>
 </html>
