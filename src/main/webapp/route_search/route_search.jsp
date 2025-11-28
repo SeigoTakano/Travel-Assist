@@ -14,7 +14,7 @@
  
   <script src="../js/header.js" defer></script> 
 </head> 
- 
+
 <body> 
  <%@ include file="../header.jsp" %> 
   <div id="app"> 
@@ -74,8 +74,7 @@
           </select> 
         </div> 
         <div class="field center" style="gap:12px"> 
-          <button id="search" class="btn primary circle icon-left"> 
-            <span class="icon">🔍</span> 
+          <button id="search" class="btn soft circle icon-left"> 
             ルート検索 
           </button> 
         </div> 
@@ -84,9 +83,8 @@
           <label for="place-query">観光地を検索:</label> 
           <input id="place-query" type="text" placeholder="例: 浅草寺, 金閣寺" class="text-input" /> 
           <div class="center" style="margin-top:8px"> 
-            <button id="place-search" class="btn primary circle icon-left"> 
-              <span class="icon"></span> 
-              観光地検索 
+            <button id="place-search" class="btn soft circle icon-left"> 
+              観光地検索
             </button> 
           </div> 
         </div> 
@@ -123,14 +121,6 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
     crossorigin="" 
   ></script> 
-  <!-- <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" 
-  /> 
-  <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" 
-  /> -->
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script> 
   <script src="../js/app.js"></script> 
 </body> 
