@@ -14,7 +14,7 @@
 
 <nav class="side-menu" id="side-menu">
     <a href="../index.jsp">プラン作成</a>
-    <a href="../views/route_search.jsp">ルート検索</a>
+    <a href="../route_search/route_search.jsp">ルート検索</a>
     <a href="../transport/transport.jsp">交通機関検索</a>
     <a href="../weather/weather.jsp">天気検索</a>
     <a href="../record/record.jsp">旅の記録</a>
