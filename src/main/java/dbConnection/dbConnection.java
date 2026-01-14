@@ -1,15 +1,24 @@
-package dbConnection;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class dbConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/travel_assist?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "root";
-    private static final String PASSWORD = "k9xmpO3ye5wQ836";
+public class dbConnection { // クラス名とファイル名(dbConnection.java)を一致させる
+    public static void main(String[] args) {
+        // 設定情報はそのまま...
+        String dbName = "TravelAssist"; 
+        String user = "root";
+        String pass = "Tk20030624&";
+        String url = "jdbc:mysql://localhost:3306/" + dbName + "?serverTimezone=Japan";
 
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASSWORD);
+        System.out.println("接続試行中...");
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+            if (conn != null) {
+                System.out.println("成功！MySQLに正常に接続されました。");
+            }
+        } catch (SQLException e) {
+            System.out.println("接続に失敗しました。");
+            e.printStackTrace();
+        }
     }
 }
