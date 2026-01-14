@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/header.css">
+
 <header class="top-header">
     <div class="hamburger" id="hamburger">
         <span></span>
@@ -14,10 +17,11 @@
 </header>
 
 <nav class="side-menu" id="side-menu">
-    <a href="../index.jsp">プラン作成</a>
-    <a href="../route_search/route_search.jsp">ルート検索</a>
-    <a href="../transport/transport.jsp">交通機関検索</a>
-    <a href="../weather/weather.jsp">天気検索</a>
-    <a href="../record/record.jsp">旅の記録</a>
-    <a href="../record/record.jsp">お問い合わせ</a>
+    <a href="${pageContext.request.contextPath}/index.jsp">プラン作成</a>
+    <a href="${pageContext.request.contextPath}/route_search/route_search.jsp">ルート検索</a>
+    <a href="${pageContext.request.contextPath}/transport/transport.jsp">交通機関検索</a>
+    <a href="${pageContext.request.contextPath}/weather/weather.jsp">天気検索</a>
+    <a href="${pageContext.request.contextPath}/record/record.jsp">旅の記録</a>
 </nav>
+
+<script src="${pageContext.request.contextPath}/js/header.js" defer></script>

@@ -1,20 +1,10 @@
+<%-- /webapp/base.jsp --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>トラベルアシスト</title>
-  <link rel="stylesheet" href="css/header.css">
-  <script src="js/header.js"></script>
-</head>
-<body>
-  
-  <%@ include file="header.jsp" %>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 
-  <main style="margin-top: 120px; padding: 20px;">
-    <h2></h2>
-    <p></p>
-  </main>
-</body>
-  <%@ include file="footer.jsp" %>
-</html>
+<link rel="stylesheet" href="${cpath}/css/header.css">
+<link rel="stylesheet" href="${cpath}/css/footer.css">
+
+<%@ include file="/header.jsp" %>
+
+<%@ include file="/footer.jsp" %>
