@@ -10,14 +10,14 @@
  
   <link rel="stylesheet" href="../css/header.css"> 
   <link rel="stylesheet" href="../css/footer.css"> 
-  <link rel="stylesheet" href="../css/route_search.css"> 
+  <link rel="stylesheet" href="../css/route_search/route_search.css"> 
  
   <script src="../js/header.js" defer></script> 
 </head> 
 
 <body> 
  <%@ include file="../header.jsp" %> 
-  <div id="app"> 
+  <div id="app">
     <header class="top-bar"> 
       <div class="btn-group-left"> 
         <button id="btn-favorites" class="btn pill icon-left" aria-expanded="false" aria-controls="favorites-panel"> 
@@ -122,7 +122,7 @@
     crossorigin="" 
   ></script> 
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script> 
-  <script src="../js/app.js"></script> 
+  <script src="../js/route_search.js"></script> 
 </body> 
 	  <%@ include file="../footer.jsp" %> 
 </html>

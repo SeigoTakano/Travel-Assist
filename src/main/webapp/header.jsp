@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <header class="top-header">
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <div class="system-name">✈ トラベルアシスト</div>
+    
     <a href="#" class="icon">
-        <img src="" />
+        <img src="" style="width:30px; height:30px; background:#ddd; border-radius:50%;" />
     </a>
 </header>
-
-<div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
 
 <nav class="side-menu" id="side-menu">
     <a href="../index.jsp">プラン作成</a>
