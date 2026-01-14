@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
             
-<<<<<<< HEAD
     
-    <wb-module deploy-name="Travel Assist">
-                        
-        
-        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                        
-        
-        <property name="context-root" value="Travel_Assist"/>
-                        
-        
-        <property name="java-output-path" value="/Travel Assist/build/classes"/>
-                    
-=======
->>>>>>> branch 'master' of https://github.com/SeigoTakano/Travel-Assist.git
-    
-<<<<<<< HEAD
-=======
     <wb-module deploy-name="Travel Assist">
                         
         
@@ -34,7 +16,6 @@
         <property name="java-output-path" value="/Travel Assist/build/classes"/>
                     
     
->>>>>>> branch 'master' of https://github.com/SeigoTakano/Travel-Assist.git
     </wb-module>
         
 
