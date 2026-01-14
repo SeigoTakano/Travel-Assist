@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import been.User;
 import dbConnection.dbConnection;
 
 public class UserDao {
@@ -15,7 +16,7 @@ public class UserDao {
     // データ取得（全件）
     public List<User> getAllUsers() {
         List<User> list = new ArrayList<>();
-        String sql = "SELECT id, email, password FROM users";
+        String sql = "SELECT id, email, password, username FROM users";
 
         try (Connection conn = dbConnection.getConnection();
              Statement stmt = conn.createStatement();
@@ -25,7 +26,8 @@ public class UserDao {
                 User user = new User(
                     rs.getInt("id"),
                     rs.getString("email"),
-                    rs.getString("password")
+                    rs.getString("password"),
+                    rs.getString("username")
                 );
                 list.add(user);
             }
@@ -37,7 +39,7 @@ public class UserDao {
 
     // データ取得（IDで検索）
     public User getUserById(int id) {
-        String sql = "SELECT id, email, password FROM users WHERE id = ?";
+        String sql = "SELECT id, email, password, username FROM users WHERE id = ?";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
@@ -47,7 +49,8 @@ public class UserDao {
                     return new User(
                         rs.getInt("id"),
                         rs.getString("email"),
-                        rs.getString("password")
+                        rs.getString("password"),
+                        rs.getString("username")
                     );
                 }
             }
@@ -59,12 +62,13 @@ public class UserDao {
 
     // データ追加
     public boolean addUser(User user) {
-        String sql = "INSERT INTO users(email, password) VALUES(?, ?)";
+        String sql = "INSERT INTO users(email, password, username) VALUES(?, ?, ?)";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, user.getEmail());
             pstmt.setString(2, user.getPassword());
+            pstmt.setString(3, user.getUsername());
             return pstmt.executeUpdate() > 0;
 
         } catch (SQLException e) {
@@ -75,13 +79,14 @@ public class UserDao {
 
     // データ更新
     public boolean updateUser(User user) {
-        String sql = "UPDATE users SET email=?, password=? WHERE id=?";
+        String sql = "UPDATE users SET email=?, password=?, username=? WHERE id=?";
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, user.getEmail());
             pstmt.setString(2, user.getPassword());
-            pstmt.setInt(3, user.getId());
+            pstmt.setString(3, user.getUsername());
+            pstmt.setInt(4, user.getId());
             return pstmt.executeUpdate() > 0;
 
         } catch (SQLException e) {
