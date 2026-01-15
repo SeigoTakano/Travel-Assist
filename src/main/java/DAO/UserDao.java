@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import been.User;
+import bean.User;
 import dbConnection.dbConnection;
 
 public class UserDao {
