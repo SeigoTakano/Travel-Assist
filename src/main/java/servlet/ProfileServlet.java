@@ -2,7 +2,7 @@ package servlet;
 
 import java.io.IOException;
 
-import been.User;
+import bean.User;
 import dao.UserDao;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

@@ -1,4 +1,4 @@
-package DAO;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Plan;
+import bean.Plan;
 
 public class planDAOImpl {
     private String url = "jdbc:mysql://localhost:3306/your_db_name"; // DB名を変更してください

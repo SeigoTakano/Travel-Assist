@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import bean.User;
-import dbConnection.dbConnection;
+import db.DBConnection;
 
 public class UserDao {
 
@@ -18,7 +18,7 @@ public class UserDao {
         List<User> list = new ArrayList<>();
         String sql = "SELECT id, email, password, username FROM users";
 
-        try (Connection conn = dbConnection.getConnection();
+        try (Connection conn = DBConnection.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
@@ -40,7 +40,7 @@ public class UserDao {
     // データ取得（IDで検索）
     public User getUserById(int id) {
         String sql = "SELECT id, email, password, username FROM users WHERE id = ?";
-        try (Connection conn = dbConnection.getConnection();
+        try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, id);
@@ -63,7 +63,7 @@ public class UserDao {
     // データ追加
     public boolean addUser(User user) {
         String sql = "INSERT INTO users(email, password, username) VALUES(?, ?, ?)";
-        try (Connection conn = dbConnection.getConnection();
+        try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, user.getEmail());
@@ -80,7 +80,7 @@ public class UserDao {
     // データ更新
     public boolean updateUser(User user) {
         String sql = "UPDATE users SET email=?, password=?, username=? WHERE id=?";
-        try (Connection conn = dbConnection.getConnection();
+        try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, user.getEmail());
@@ -98,7 +98,7 @@ public class UserDao {
     // データ削除
     public boolean deleteUser(int id) {
         String sql = "DELETE FROM users WHERE id=?";
-        try (Connection conn = dbConnection.getConnection();
+        try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, id);

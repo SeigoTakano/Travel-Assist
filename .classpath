@@ -14,11 +14,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/oohara/Downloads/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/mysql-connector-j-9.5.0.jar"/>
-=======
-	<classpathentry kind="lib" path="lib/mysql-connector-j-9.5.0.jar"/>
->>>>>>> branch 'master' of https://github.com/SeigoTakano/Travel-Assist.git
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
